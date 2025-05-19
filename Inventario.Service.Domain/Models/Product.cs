@@ -1,7 +1,10 @@
 namespace Inventario.Service.Domain.Models
 {
     public class Product
-    {
+    {  
+        /// <summary>
+        /// Represents a product in the inventory system.
+        /// </summary>
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
@@ -13,11 +16,6 @@ namespace Inventario.Service.Domain.Models
         public bool IsActive { get; set; } = true;
         public string ImageUrl { get; set; } = string.Empty;
 
-        public Product()
-        {
-            CreatedAt = DateTime.UtcNow;
-            UpdatedAt = DateTime.UtcNow;
-        }
         public Product(string name, string description, string category, decimal price, int stock, string imageUrl)
         {
             Name = name;
